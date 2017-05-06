@@ -40,17 +40,17 @@ defmodule Ingestory.Worker do
       {:ok, peer_pid} ->
         case subscribe(peer_pid, "ticker", []) do
           {:ok, subscription_pid} -> {:ok, subscription_pid}
-          {:error, reason} -> {:error, reason}
+          {:error, reason} -> {:error, reason} # here is where I would recurse and call subscribe(peer_pid, channel)
         end
         case subscribe(peer_pid, "BTC_XRP", []) do
           {:ok, subscription_pid} -> {:ok, subscription_pid}
-          {:error, reason} -> {:error, reason}
+          {:error, reason} -> {:error, reason} # here is where I would recurse and call subscribe(peer_pid, channel)
         end
       {:error, timeout} ->
         Logger.debug fn ->
           "timeout problem lol: #{timeout}"
         end
-        {:stop, timeout}
+        {:stop, timeout} # here is where I would recurse and call connect({exchange_name, uri})
     end
   end
 
@@ -58,7 +58,7 @@ defmodule Ingestory.Worker do
     case Spell.cast_subscribe(pid, channel, options) do
       {:ok, subscriber} -> {:ok, subscriber}
       {:error, reason} ->
-        {:stop, reason}
+        {:stop, reason} # This used to return {:error, reason}, but I'm not sure if that's what I should do.
     end
   end
 end
