@@ -1,0 +1,9 @@
+%{"bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},
+  "credo": {:hex, :credo, "0.7.3", "9827ab04002186af1aec014a811839a06f72aaae6cd5eed3919b248c8767dbf3", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}], "hexpm"},
+  "fs": {:hex, :fs, "2.12.0", "ad631efacc9a5683c8eaa1b274e24fa64a1b8eb30747e9595b93bec7e492e25e", [:rebar3], [], "hexpm"},
+  "mix_test_watch": {:hex, :mix_test_watch, "0.4.0", "7e44b681b0238999d4c39b5beed77b4ac45aef1c112a763aae414bdb5bc34523", [:mix], [{:fs, "~> 2.12", [hex: :fs, repo: "hexpm", optional: false]}], "hexpm"},
+  "msgpax": {:hex, :msgpax, "0.8.2", "0e83d86e7cbf1bdcf7b870c25951df042ec19f9804a1a9c2fa59091a43ee2886", [:mix], [], "hexpm"},
+  "pbkdf2": {:git, "https://github.com/pma/erlang-pbkdf2.git", "93b290d72b107747c717fb1f55811d2ebc1b73ed", [branch: "master"]},
+  "poison": {:hex, :poison, "1.5.2", "560bdfb7449e3ddd23a096929fb9fc2122f709bcc758b2d5d5a5c7d0ea848910", [:mix], [], "hexpm"},
+  "spell": {:git, "https://github.com/clayrichardson/spell.git", "5f055dcc4b8b15c55dbc6f1f20c54fc4ebfbfe25", [branch: "master"]},
+  "websocket_client": {:git, "https://github.com/jeremyong/websocket_client.git", "f465f229958293949e4a192bea65a7e47bb2f762", [tag: "v0.7"]}}
